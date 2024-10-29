@@ -1,0 +1,27 @@
+# Große Dateien
+GND/
+*.xml
+*.xml.gz
+*.jsonld.gz
+*.csv
+*.zip
+*.pdf
+*.xlsx
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+
+# System
+.DS_Store
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
