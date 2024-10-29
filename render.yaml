@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: thulb-classification-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn library_api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DNB_SRU_URL
+        value: https://services.dnb.de/sru/dnb
+      - key: RVK_API_URL
+        value: https://rvk.uni-regensburg.de/api
+      - key: USE_API_KEY
+        value: "true"
+      - key: API_KEY
+        sync: false  # API-Key wird manuell im Dashboard gesetzt
